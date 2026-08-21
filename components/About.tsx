@@ -3,9 +3,6 @@ import SectionHeader from '@/components/SectionHeader'
 
 const minors = ['Business Management', 'Technology Management', 'Political Science']
 
-const stats = [
-]
-
 export default function About() {
     return (
         <section id="about" className="py-24 bg-slate-900">
@@ -64,18 +61,6 @@ export default function About() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="grid grid-cols-3 gap-4">
-                            {stats.map((s) => (
-                                <div
-                                    key={s.label}
-                                    className="rounded-xl border border-slate-700 bg-slate-800/50 p-4 text-center"
-                                >
-                                    <p className="text-2xl font-bold text-cyan-400">{s.value}</p>
-                                    <p className="mt-1 text-xs text-slate-500">{s.label}</p>
-                                </div>
-                            ))}
                         </div>
                     </div>
                 </div>
