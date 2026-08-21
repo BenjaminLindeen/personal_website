@@ -7,7 +7,7 @@ type Experience = {
     location: string
     period: string
     current?: boolean
-    description: string
+    description: string[]
     tags: string[]
 }
 
@@ -18,17 +18,20 @@ const experiences: Experience[] = [
         location: 'San Mateo, CA, Remote',
         period: 'Aug 2026 – Present',
         current: true,
-        description:
-            '',
+        description: [],
         tags: ['Enterprise Software', 'Technical Demos', 'Cyber Security & Data Control'],
     },
     {
-        company: 'Emerson',
+        company: 'Emerson | Aspen Technology',
         role: 'Associate Project Engineer',
         location: 'Medina, MN',
         period: 'Aug 2025 – Jul 2026',
-        description:
-            '',
+        description: [
+            'Served as primary liaison between enterprise clients and engineering teams on projects from $250,000 - $1 Million',
+            'Managed project tasks in an Agile environment, ensuring on-time delivery of proprietary Monarch DGM software',
+            'Supported regulatory compliance by applying data-informed decision-making for critical renewable electric energy',
+            'Managed software and hardware deployments across enterprise clients such as Exelon and Xpansiv, balancing competing priorities and coordinating cross-functional stakeholders',
+        ],
         tags: ['Enterprise Software', 'Cross-functional Engineering', 'Renewable Energy Infrastructure'],
     },
     {
@@ -36,8 +39,11 @@ const experiences: Experience[] = [
         role: 'Software Engineering Intern',
         location: 'Mounds View, MN',
         period: 'May 2024 – Aug 2024',
-        description:
-            '',
+        description: [
+            'Performed software/hardware validation with wide area network gateways and next-generation IoT sensors',
+            'Developed an analyzer dashboard with a small cross-functional team and presented it to senior leadership',
+            'The project was deemed worthy for use in production with clients such as Ecolab, Chipotle, and Target',
+        ],
         tags: ['Enterprise Hardware & Software', 'Fullstack Development', 'IoT'],
     },
     {
@@ -45,8 +51,11 @@ const experiences: Experience[] = [
         role: 'Associate System Administrator',
         location: 'Minneapolis, MN',
         period: 'May 2023 – Aug 2023',
-        description:
-            '',
+        description: [
+            'Managed and optimized over 100 Linux servers and clients used for economics and psychology research',
+            'Maintained system uptime and upgraded software support through Chef Workstation & GitHub Enterprise',
+            'Documented complex internal procedures and created intuitive tutorials for user comprehension',
+        ],
         tags: ['Distributed Computer Infrastructure', 'System Administration', 'Psychology and Economics Research'],
     },
     {
@@ -54,8 +63,11 @@ const experiences: Experience[] = [
         role: 'Customer Sales Representative',
         location: 'St. Louis Park, MN',
         period: 'Oct 2020 – Jun 2021',
-        description:
-            '',
+        description: [
+            'Provided outstanding service and purchase advice for tech customers during the market frenzies of COVID-19',
+            'Smashed the sales target of 6% and achieved a 20% lifetime conversion rate on in-store extended warranties',
+            'Personally generated five figures of revenue in less than one month and was ranked as the number 1 storewide and in the top 5 nationwide during the 2020 holiday sales special',
+        ],
         tags: ['Computer Electronics', 'Sales', 'Retail'],
     },
 ]
@@ -119,7 +131,16 @@ export default function Experience() {
                     </span>
                                     </div>
 
-                                    <p className="mb-4 text-sm leading-relaxed text-slate-400">{exp.description}</p>
+                                    {exp.description.length > 0 && (
+                                        <ul className="mb-4 space-y-2 text-sm leading-relaxed text-slate-400">
+                                            {exp.description.map((line, idx) => (
+                                                <li key={idx} className="flex gap-2">
+                                                    <span className="text-cyan-400">•</span>
+                                                    <span>{line}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
 
                                     <div className="flex flex-wrap gap-2">
                                         {exp.tags.map((tag) => (
