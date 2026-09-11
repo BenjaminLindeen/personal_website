@@ -21,18 +21,6 @@ type Interest = {
 
 const interests: Interest[] = [
     {
-        icon: PenLine,
-        label: 'Writing',
-        detail: 'Medium blogger',
-        href: 'https://medium.com/@benjaminlindeen',
-    },
-    {
-        icon: Cpu,
-        label: 'PC Hardware',
-        detail: 'Builder & enthusiast',
-        href: 'https://pcpartpicker.com/user/Asian_PC_Guy/saved/',
-    },
-    {
         icon: Award,
         label: 'Taekwondo',
         detail: 'Black Belt, 1st Degree',
@@ -41,6 +29,23 @@ const interests: Interest[] = [
         icon: Dumbbell,
         label: 'Weightlifting',
         detail: 'B: 215 · S: 325 · DL: 335 @ 150lb',
+    },
+    {
+        icon: PenLine,
+        label: 'Writing',
+        detail: 'Mostly Tech',
+        href: 'https://medium.com/@benjaminlindeen',
+    },
+    {
+        icon: BookOpen,
+        label: 'Reading',
+        detail: 'Mostly Nonfiction',
+    },
+    {
+        icon: Cpu,
+        label: 'PC Hardware',
+        detail: 'Builder & enthusiast',
+        href: 'https://pcpartpicker.com/user/Asian_PC_Guy/saved/',
     },
     {
         icon: Car,
@@ -63,10 +68,15 @@ const interests: Interest[] = [
         detail: 'PC gaming',
     },
     {
-        icon: BookOpen,
-        label: 'Reading',
-        detail: 'Mostly Nonfiction about the topics above',
+        icon: Globe,
+        label: 'Biking',
+        detail: 'Recreational',
     },
+    {
+        icon: Globe,
+        label: 'Fishing',
+        detail: 'Minnesota native',
+    }
 ]
 
 function Card({icon: Icon, label, detail}: Omit<Interest, 'href'>) {

@@ -18,7 +18,13 @@ const experiences: Experience[] = [
         location: 'San Mateo, CA, Remote',
         period: 'Aug 2026 – Present',
         current: true,
-        description: [],
+        description: [
+            'Supported the Corporate AE team as technical liaison translating client requirements into tailored security solutions',
+            'Secured sensitive corporate CMMC 2.0 and FedRAMP data compliance standards across regulated industries',
+            'Bridged technical capabilities to business outcomes by delivering customized product demos for prospective clients',
+            'Enabled secure AI adoption for corporate clients by architecting data governance solutions that protect sensitive\n' +
+            'information from exposure to agentic AI/LLM systems\n'
+        ],
         tags: ['Enterprise Software', 'Technical Demos', 'Cyber Security & Data Control'],
     },
     {
