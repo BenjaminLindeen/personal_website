@@ -18,10 +18,8 @@ export default function About() {
                             technology intersects with organizations and society.
                         </p>
                         <p>
-                            Currently working as a Junior Sales Engineer at Kiteworks in San Mateo, CA, I
-                            bridge the gap between complex technical solutions and customer needs. My career
-                            spans software engineering internships, industrial project engineering, and enterprise
-                            sales.
+                            Currently working as a Junior Sales Engineer at Kiteworks, I
+                            bridge the gap between complex technical solutions and customer needs.
                         </p>
                     </div>
 
