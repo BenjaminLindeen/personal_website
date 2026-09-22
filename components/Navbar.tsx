@@ -6,7 +6,6 @@ import {Menu, X} from 'lucide-react'
 const links = [
     {href: '#about', label: 'About'},
     {href: '#experience', label: 'Experience'},
-    {href: '#skills', label: 'Skills'},
     {href: '#interests', label: 'Interests'},
     {href: '#contact', label: 'Contact'},
 ]
